@@ -8,14 +8,14 @@
 import UIKit
 
 class Item: NSObject {
-    var name: String
-    var valueInDollars: Int
+    var title: String
+    var adoptionFee: Int
     var serialNumber: String?
     let dateCreated: Date
     
-    init(name: String, serialNumber: String?, valueInDollars: Int) {
-        self.name = name
-        self.valueInDollars = valueInDollars
+    init(title: String, serialNumber: String?, adoptionFee: Int) {
+        self.title = title
+        self.adoptionFee = adoptionFee
         self.serialNumber = serialNumber
         self.dateCreated = Date()
         super.init()
@@ -24,23 +24,23 @@ class Item: NSObject {
     //creates random item
     convenience init(random: Bool = false) {
         if random {
-            let adjectives = ["Fluffy", "Rusty", "Shiny"]
-            let nouns = ["Bear", "Spork", "Mac"]
-            var idx = arc4random_uniform(UInt32(adjectives.count))
-            let randomAdjective = adjectives[Int(idx)]
-            idx = arc4random_uniform(UInt32(nouns.count))
-            let randomNoun = nouns[Int(idx)]
-            let randomName = "\(randomAdjective) \(randomNoun)"
-            let randomValue = Int(arc4random_uniform(100))
+            let hairType = ["Long Hair", "Short Hair", "Medium Hair"]
+            let pets = ["Kitten", "Cat", "Puppy", "Dog"]
+            var idx = arc4random_uniform(UInt32(hairType.count))
+            let randHairType = hairType[Int(idx)]
+            idx = arc4random_uniform(UInt32(pets.count))
+            let randPet = pets[Int(idx)]
+            let randTitle = "\(randHairType) \(randPet)"
+            let randAdoptFee = Int(arc4random_uniform(100))
 //            let randomSerialNumber = UUID().uuidString.components(separatedBy: "-").first!
             let randomSerialNumber = "number"
-            self.init(name: randomName,
+            self.init(title: randTitle,
             serialNumber: randomSerialNumber,
-            valueInDollars: randomValue)
+            adoptionFee: randAdoptFee)
             
         }
         else {
-            self.init(name: "", serialNumber: nil, valueInDollars: 0)
+            self.init(title: "", serialNumber: nil, adoptionFee: 0)
             
         }
         
