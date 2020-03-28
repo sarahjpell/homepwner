@@ -16,7 +16,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
     
-    var item: Item!
+    var item: Item!{
+        didSet {
+            navigationItem.title = item.title
+        }
+    }
 
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
