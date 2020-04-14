@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-
+        print(#function)
         // Create an ImageStore
         let imageStore = ImageStore()
         
@@ -30,13 +30,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
     }
     
+    func applicationWillResignActive(_ application: UIApplication) {
+        print(#function)
+    }
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
+        print(#function)
         let success = itemStore.saveChanges()
         if (success) {
             print("Saved all of the Items")
         } else {
             print("Could not save any of the Items")
         }
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        print(#function)
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        print(#function)
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        print(#function)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
