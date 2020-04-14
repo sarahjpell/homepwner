@@ -7,17 +7,37 @@
 //
 import UIKit
 
-class Item: NSObject {
+class Item: NSObject, NSCoding {
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(title, forKey: "title")
+        aCoder.encode(dateCreated, forKey: "dateCreated")
+        aCoder.encode(itemKey, forKey: "itemKey")
+        aCoder.encode(serialNumber, forKey: "serialNumber")
+        aCoder.encode(adoptionFee, forKey: "adoptionFee")
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        title = aDecoder.decodeObject(forKey: "title") as! String
+        dateCreated = aDecoder.decodeObject(forKey: "dateCreated") as! Date
+        itemKey = aDecoder.decodeObject(forKey: "itemKey") as! String
+        serialNumber = aDecoder.decodeObject(forKey: "serialNumber") as! String?
+        adoptionFee = aDecoder.decodeInteger(forKey: "adoptionFee")
+        super.init()
+    }
+    
     var title: String
     var adoptionFee: Int
     var serialNumber: String?
     let dateCreated: Date
+    let itemKey: String
     
     init(title: String, serialNumber: String?, adoptionFee: Int) {
         self.title = title
         self.adoptionFee = adoptionFee
         self.serialNumber = serialNumber
         self.dateCreated = Date()
+        self.itemKey = UUID().uuidString
         super.init()
         
     }

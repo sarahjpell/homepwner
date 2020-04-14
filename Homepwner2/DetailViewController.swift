@@ -7,10 +7,28 @@
 //
 
 import UIKit
-class DetailViewController: UIViewController, UITextFieldDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate,
+UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    
+    //currently works, but if need to come back go to page 287
+    @IBAction func takePicture(_ sender: UIBarButtonItem) {
+        let imagePicker = UIImagePickerController()
+         // If the device has a camera, take a picture; otherwise,
+         // just pick from photo library
+         if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+         } else {
+            imagePicker.sourceType = .photoLibrary
+         }
+        imagePicker.delegate = self
+        // Place image picker on the screen
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var serialNumberField: UITextField!
     @IBOutlet var nameField: UITextField!
     @IBOutlet var valueField: UITextField!
@@ -21,7 +39,23 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
             navigationItem.title = item.title
         }
     }
+    var imageStore: ImageStore!
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        
+        
+        if let originalImage = info[.originalImage] as? UIImage {
+            // Store the image in the ImageStore for the item's key
+            imageStore.setImage(originalImage, forKey: item.itemKey)
+            imageView.image = originalImage
+        }
+    }
 
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -48,6 +82,12 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         serialNumberField.text = item.serialNumber
         valueField.text = numberFormatter.string(from: NSNumber(value: item.adoptionFee))
         dateLabel.text = dateFormatter.string(from: item.dateCreated)
+        // Get the item key
+        let key = item.itemKey
+        // If there is an associated image with the item
+        // display it on the image view
+        let imageToDisplay = imageStore.image(forKey: key)
+        imageView.image = imageToDisplay
      }
     
     override func viewWillDisappear(_ animated: Bool) {

@@ -11,20 +11,32 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let itemStore = ItemStore()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-//         Create an ItemStore
-        let itemStore = ItemStore()
+
+        // Create an ImageStore
+        let imageStore = ImageStore()
+        
         // Access the ItemsViewController and set its item store
         let navController = window!.rootViewController as! UINavigationController
         let itemsController = navController.topViewController as! ItemsViewController
         itemsController.itemStore = itemStore
+        itemsController.imageStore = imageStore
         guard let _ = (scene as? UIWindowScene) else { return }
         
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        let success = itemStore.saveChanges()
+        if (success) {
+            print("Saved all of the Items")
+        } else {
+            print("Could not save any of the Items")
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
