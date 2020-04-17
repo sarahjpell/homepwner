@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xge-gO-eJi">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +28,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77k-dB-ctV">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77k-dB-ctV" userLabel="Description Label">
                                             <rect key="frame" x="20" y="38" width="33" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,8 +52,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="desc" destination="77k-dB-ctV" id="QHP-WR-opf"/>
                                     <outlet property="nameLabel" destination="Cft-Re-ZoX" id="yVh-V2-GLD"/>
-                                    <outlet property="serialNumberLabel" destination="77k-dB-ctV" id="D8b-hI-keb"/>
                                     <outlet property="valueLabel" destination="PUD-ht-V43" id="YFO-AI-uIF"/>
                                     <segue destination="YN0-XM-WwB" kind="show" identifier="showItem" id="nom-FM-fOS"/>
                                 </connections>
@@ -109,14 +109,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gyR-Zk-sLC">
                                         <rect key="frame" x="0.0" y="42" width="374" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1g-Uh-Db3">
-                                                <rect key="frame" x="0.0" y="0.0" width="42.666666666666664" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1g-Uh-Db3">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aS1-XC-mnE" userLabel="Serial numberField">
-                                                <rect key="frame" x="50.666666666666657" y="0.0" width="323.33333333333337" height="34"/>
+                                                <rect key="frame" x="95.666666666666657" y="0.0" width="278.33333333333337" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -128,14 +128,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dNu-9n-IoP">
                                         <rect key="frame" x="0.0" y="84" width="374" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxf-pF-kGY">
-                                                <rect key="frame" x="0.0" y="0.0" width="42" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adoption Fee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxf-pF-kGY">
+                                                <rect key="frame" x="0.0" y="0.0" width="101.66666666666667" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8G-JO-ZmO">
-                                                <rect key="frame" x="50" y="0.0" width="324" height="34"/>
+                                                <rect key="frame" x="109.66666666666666" y="0.0" width="264.33333333333337" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -195,9 +195,9 @@
                     <navigationItem key="navigationItem" id="qbl-7p-VEL"/>
                     <connections>
                         <outlet property="dateLabel" destination="bF2-po-olL" id="ApV-ro-TiC"/>
+                        <outlet property="desc" destination="aS1-XC-mnE" id="Eo8-KE-i47"/>
                         <outlet property="imageView" destination="U4p-ad-K7A" id="CY1-U3-ydh"/>
                         <outlet property="nameField" destination="bKk-CC-OMR" id="qKS-HE-6mS"/>
-                        <outlet property="serialNumberField" destination="aS1-XC-mnE" id="TXW-TX-Pcw"/>
                         <outlet property="valueField" destination="M8G-JO-ZmO" id="EXF-kx-MPo"/>
                     </connections>
                 </viewController>

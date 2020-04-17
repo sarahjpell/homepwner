@@ -13,7 +13,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         view.endEditing(true)
     }
     
-    //currently works, but if need to come back go to page 287
+    
     @IBAction func takePicture(_ sender: UIBarButtonItem) {
         let imagePicker = UIImagePickerController()
          // If the device has a camera, take a picture; otherwise,
@@ -29,7 +29,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     }
     
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var serialNumberField: UITextField!
+    @IBOutlet var desc: UITextField!
     @IBOutlet var nameField: UITextField!
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
@@ -79,7 +79,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         nameField.text = item.title
-        serialNumberField.text = item.serialNumber
+        desc.text = item.desc
         valueField.text = numberFormatter.string(from: NSNumber(value: item.adoptionFee))
         dateLabel.text = dateFormatter.string(from: item.dateCreated)
         // Get the item key
@@ -96,7 +96,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         view.endEditing(true)
         // "Save" changes to item
         item.title = nameField.text ?? ""
-        item.serialNumber = serialNumberField.text
+        item.desc = desc.text
         if let valueText = valueField.text, let value = numberFormatter.number(from: valueText) {
             item.adoptionFee = value.intValue
         } else {

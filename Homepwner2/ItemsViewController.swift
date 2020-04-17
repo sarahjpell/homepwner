@@ -82,7 +82,7 @@ class ItemsViewController: UITableViewController {
         let item = itemStore.allItems[indexPath.row]
         // Configure the cell with the Item
         cell.nameLabel.text = item.title
-        cell.serialNumberLabel.text = item.serialNumber
+        cell.desc.text = item.desc
         cell.valueLabel.text = "$\(item.adoptionFee)"
         
         return cell
