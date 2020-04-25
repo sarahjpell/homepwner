@@ -16,14 +16,18 @@ class ItemsViewController: UITableViewController {
     
     @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         // Create a new item and add it to the store
+        print("HI ADDING NEW ITEM")
         let newItem = itemStore.createItem()
         // Figure out where that item is in the array
         if let index = itemStore.allItems.firstIndex(of: newItem) {
-        let indexPath = IndexPath(row: index, section: 0)
-        // Insert this new row into the table
-        tableView.insertRows(at: [indexPath], with: .automatic)
+            let indexPath = IndexPath(row: index, section: 0)
+            // Insert this new row into the table
+            tableView.insertRows(at: [indexPath], with: .automatic)
+        
         }
     }
+    
+    @IBOutlet var additem: UIBarButtonItem!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -96,7 +100,33 @@ class ItemsViewController: UITableViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // If the triggered segue is the "showItem" segue
+        
         switch segue.identifier {
+            
+        case "addItem"?:
+            print("here is the segue working?")
+            let newItem = itemStore.createItem()
+            // Figure out where that item is in the array
+            if let index = itemStore.allItems.firstIndex(of: newItem) {
+                let indexPath = IndexPath(row: index, section: 0)
+                // Insert this new row into the table
+                tableView.insertRows(at: [indexPath], with: .automatic)
+                
+                let detailViewController = segue.destination as! DetailViewController
+                detailViewController.item = newItem
+                detailViewController.imageStore = imageStore
+                
+            }
+
+            if let row = tableView.indexPathForSelectedRow?.row {
+            // Get the item associated with this row and pass it along
+                let item = itemStore.allItems[row]
+                let detailViewController = segue.destination as! DetailViewController
+                detailViewController.item = item
+                detailViewController.imageStore = imageStore
+            }
+            
+            
         case "showItem"?:
             // Figure out which row was just tapped
             if let row = tableView.indexPathForSelectedRow?.row {

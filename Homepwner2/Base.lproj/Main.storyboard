@@ -68,6 +68,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wnd-KA-lt4">
                             <connections>
                                 <action selector="addNewItem:" destination="3jE-FM-CXO" id="9eo-WX-div"/>
+                                <segue destination="YN0-XM-WwB" kind="show" identifier="addItem" id="hzL-82-hUv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -108,6 +109,9 @@
                                                 </connections>
                                             </textField>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="bKk-CC-OMR" firstAttribute="leading" secondItem="WnL-iG-deM" secondAttribute="trailing" constant="8" id="CIi-Kf-8eA"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gyR-Zk-sLC">
                                         <rect key="frame" x="0.0" y="42" width="374" height="34"/>
@@ -130,6 +134,9 @@
                                                 </connections>
                                             </textField>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="aS1-XC-mnE" firstAttribute="leading" secondItem="M1g-Uh-Db3" secondAttribute="trailing" constant="8" id="fGn-E8-sQv"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dNu-9n-IoP">
                                         <rect key="frame" x="0.0" y="84" width="374" height="34"/>
@@ -152,6 +159,9 @@
                                                 </connections>
                                             </textField>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="M8G-JO-ZmO" firstAttribute="leading" secondItem="rxf-pF-kGY" secondAttribute="trailing" constant="8" id="P0G-MA-fHx"/>
+                                        </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Arrived" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bF2-po-olL">
                                         <rect key="frame" x="0.0" y="125.99999999999999" width="374" height="20.333333333333329"/>
@@ -241,4 +251,7 @@
             <point key="canvasLocation" x="134.78260869565219" y="111.83035714285714"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hzL-82-hUv"/>
+    </inferredMetricsTieBreakers>
 </document>

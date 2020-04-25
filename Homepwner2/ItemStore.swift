@@ -11,17 +11,6 @@ class ItemStore {
     
     var allItems = [Item]()
     
-//    no core data rn
-//    let persistentContainer: NSPersistentContainer = {
-//        let container = NSPersistentContainer(name: "Homepwner2")
-//        container.loadPersistentStores { (description, error) in
-//            if let error = error {
-//                print("Error setting up Core Data \(error)).")
-//            }
-//        }
-        
-//        return container
-//    }()
     
     let itemArchiveURL: URL = {
         let documentsDirectories =
@@ -43,16 +32,12 @@ class ItemStore {
         return NSKeyedArchiver.archiveRootObject(allItems, toFile: itemArchiveURL.path)
     }
     
-    //create and return new item
-//    @discardableResult func createItem(into context: NSManagedObjectContext) -> Item {
-//
-//        let newItem = NSEntityDescription.insertNewObjectForEntityForName("newItem", inManagedObjectContext: NSManagedObject)
-//let newItem = Item(context: context)
     @discardableResult func createItem() -> Item{
         let newItem = Item()
         allItems.append(newItem)
         return newItem
     }
+    
     func removeItem(_ item: Item) {
         if let index = allItems.firstIndex(of: item) {
         allItems.remove(at: index)
