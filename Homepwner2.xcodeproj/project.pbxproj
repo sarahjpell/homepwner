@@ -42,7 +42,7 @@
 /* Begin PBXFileReference section */
 		6A654E9E2445506200779CA6 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		6A81D62B2454EB3700AD3B23 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		6AA9AEA2242D87EE00857714 /* Homepwner2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AA9AEA2242D87EE00857714 /* Adoption List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adoption List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AA9AEA5242D87EE00857714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AA9AEA7242D87EE00857714 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6AA9AEAC242D87EE00857714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		6AA9AEA3242D87EE00857714 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6AA9AEA2242D87EE00857714 /* Homepwner2.app */,
+				6AA9AEA2242D87EE00857714 /* Adoption List.app */,
 				6AA9AEB8242D87F100857714 /* Homepwner2Tests.xctest */,
 				6AA9AEC3242D87F100857714 /* Homepwner2UITests.xctest */,
 			);
@@ -160,7 +160,7 @@
 			);
 			name = Homepwner2;
 			productName = Homepwner2;
-			productReference = 6AA9AEA2242D87EE00857714 /* Homepwner2.app */;
+			productReference = 6AA9AEA2242D87EE00857714 /* Adoption List.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6AA9AEB7242D87F100857714 /* Homepwner2Tests */ = {
@@ -461,7 +461,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Individual-Project.Homepwner2";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Adoption List";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -478,7 +478,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Individual-Project.Homepwner2";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Adoption List";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
