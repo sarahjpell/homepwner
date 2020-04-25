@@ -95,10 +95,10 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         // Clear first responder
         view.endEditing(true)
         // "Save" changes to item
-        item.title = nameField.text ?? ""
-        item.desc = desc.text
+        item.title = nameField.text!
+        item.desc = desc.text!
         if let valueText = valueField.text, let value = numberFormatter.number(from: valueText) {
-            item.adoptionFee = value.intValue
+            item.adoptionFee = value.int64Value
         } else {
             item.adoptionFee = 0
         }

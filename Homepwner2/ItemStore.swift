@@ -5,12 +5,22 @@
 //  Created by Sarah Pell on 3/26/20.
 //  Copyright © 2020 Sarah Pell. All rights reserved.
 //
-
+import CoreData
 import UIKit
 class ItemStore {
     
     var allItems = [Item]()
-    
+//    var item = Item()
+    let persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "DataModel")
+        container.loadPersistentStores { (description, error) in
+            if let error = error {
+                print("Error setting up Core Data \(error)).")
+            }
+        }
+        
+        return container
+    }()
     let itemArchiveURL: URL = {
         let documentsDirectories =
             FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -32,8 +42,12 @@ class ItemStore {
     }
     
     //create and return new item
-    @discardableResult func createItem() -> Item {
-        let newItem = Item(random: true)
+//    @discardableResult func createItem(into context: NSManagedObjectContext) -> Item {
+//
+//        let newItem = NSEntityDescription.insertNewObjectForEntityForName("newItem", inManagedObjectContext: NSManagedObject)
+//let newItem = Item(context: context)
+    @discardableResult func createItem() -> Item{
+        let newItem = Item()
         allItems.append(newItem)
         return newItem
     }

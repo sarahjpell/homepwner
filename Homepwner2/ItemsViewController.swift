@@ -5,9 +5,8 @@
 //  Created by Sarah Pell on 3/26/20.
 //  Copyright © 2020 Sarah Pell. All rights reserved.
 //
-
-import UIKit
 import CoreData
+import UIKit
 
 class ItemsViewController: UITableViewController {
     
@@ -16,7 +15,9 @@ class ItemsViewController: UITableViewController {
     var imageStore: ImageStore!
     
     @IBAction func addNewItem(_ sender: UIBarButtonItem) {
+        print("ISSUE HERE")
         // Create a new item and add it to the store
+//        let newItem = itemStore.createItem(into: NSManagedObjectContext)
         let newItem = itemStore.createItem()
         // Figure out where that item is in the array
         if let index = itemStore.allItems.firstIndex(of: newItem) {

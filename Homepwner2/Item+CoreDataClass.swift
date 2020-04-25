@@ -12,5 +12,16 @@ import CoreData
 
 
 public class Item: NSManagedObject {
+    override public func awakeFromInsert() {
+        super.awakeFromInsert()
+
+        // Give properties initial values
+        title = "Name"
+        adoptionFee = 0
+        dateCreated = Date()
+        desc = "Description"
+        itemKey = "123ABC"
+        
+    }
 
 }
