@@ -98,7 +98,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         item.title = nameField.text!
         item.desc = desc.text!
         if let valueText = valueField.text, let value = numberFormatter.number(from: valueText) {
-            item.adoptionFee = value.int64Value
+            item.adoptionFee = value.intValue
         } else {
             item.adoptionFee = 0
         }

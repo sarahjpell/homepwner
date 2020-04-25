@@ -15,9 +15,7 @@ class ItemsViewController: UITableViewController {
     var imageStore: ImageStore!
     
     @IBAction func addNewItem(_ sender: UIBarButtonItem) {
-        print("ISSUE HERE")
         // Create a new item and add it to the store
-//        let newItem = itemStore.createItem(into: NSManagedObjectContext)
         let newItem = itemStore.createItem()
         // Figure out where that item is in the array
         if let index = itemStore.allItems.firstIndex(of: newItem) {
@@ -92,7 +90,7 @@ class ItemsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all 
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
     }

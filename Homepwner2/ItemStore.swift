@@ -10,17 +10,19 @@ import UIKit
 class ItemStore {
     
     var allItems = [Item]()
-//    var item = Item()
-    let persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "DataModel")
-        container.loadPersistentStores { (description, error) in
-            if let error = error {
-                print("Error setting up Core Data \(error)).")
-            }
-        }
+    
+//    no core data rn
+//    let persistentContainer: NSPersistentContainer = {
+//        let container = NSPersistentContainer(name: "Homepwner2")
+//        container.loadPersistentStores { (description, error) in
+//            if let error = error {
+//                print("Error setting up Core Data \(error)).")
+//            }
+//        }
         
-        return container
-    }()
+//        return container
+//    }()
+    
     let itemArchiveURL: URL = {
         let documentsDirectories =
             FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
