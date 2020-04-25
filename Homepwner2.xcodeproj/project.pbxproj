@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23E74D9563B6EFFCDCE478F7 /* Pods_Homepwner2_Homepwner2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77782581A2D6D20CD3A64400 /* Pods_Homepwner2_Homepwner2UITests.framework */; };
+		479C6FDE405F5B26E230E675 /* Pods_Homepwner2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FFBFC7C944E369F4A23E42 /* Pods_Homepwner2Tests.framework */; };
 		6A654E9F2445506200779CA6 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A654E9E2445506200779CA6 /* ImageStore.swift */; };
 		6A81D6242454A7BC00AD3B23 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A81D6232454A7BC00AD3B23 /* Item.swift */; };
+		6A81D6262454C3D300AD3B23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A81D6252454C3D300AD3B23 /* GoogleService-Info.plist */; };
 		6AA9AEA6242D87EE00857714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9AEA5242D87EE00857714 /* AppDelegate.swift */; };
 		6AA9AEA8242D87EE00857714 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9AEA7242D87EE00857714 /* SceneDelegate.swift */; };
 		6AA9AEAD242D87EE00857714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA9AEAB242D87EE00857714 /* Main.storyboard */; };
@@ -20,6 +23,7 @@
 		6AA9AEDA242D89B600857714 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9AED9242D89B600857714 /* ItemStore.swift */; };
 		6AA9AEDC242FABE500857714 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9AEDB242FABE500857714 /* ItemCell.swift */; };
 		6AA9AEDE242FD9D600857714 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9AEDD242FD9D600857714 /* DetailViewController.swift */; };
+		F36975ABFFE2384FDAC5D341 /* Pods_Homepwner2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19BCF8FC6E4C520000F5D3B /* Pods_Homepwner2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		221368C99A1C0FCFF015587C /* Pods-Homepwner2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homepwner2.release.xcconfig"; path = "Target Support Files/Pods-Homepwner2/Pods-Homepwner2.release.xcconfig"; sourceTree = "<group>"; };
+		23E594E1FB1F4613105662D2 /* Pods-Homepwner2-Homepwner2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homepwner2-Homepwner2UITests.debug.xcconfig"; path = "Target Support Files/Pods-Homepwner2-Homepwner2UITests/Pods-Homepwner2-Homepwner2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		27DAB301284919C78B48A8A0 /* Pods-Homepwner2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homepwner2Tests.release.xcconfig"; path = "Target Support Files/Pods-Homepwner2Tests/Pods-Homepwner2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		562D1BBAF687C2296DB5819F /* Pods-Homepwner2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homepwner2.debug.xcconfig"; path = "Target Support Files/Pods-Homepwner2/Pods-Homepwner2.debug.xcconfig"; sourceTree = "<group>"; };
 		6A654E9E2445506200779CA6 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		6A81D6232454A7BC00AD3B23 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../../../Documents/temp/Item.swift; sourceTree = "<group>"; };
+		6A81D6252454C3D300AD3B23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6AA9AEA2242D87EE00857714 /* Homepwner2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AA9AEA5242D87EE00857714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AA9AEA7242D87EE00857714 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +68,11 @@
 		6AA9AED9242D89B600857714 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		6AA9AEDB242FABE500857714 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		6AA9AEDD242FD9D600857714 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		73FFBFC7C944E369F4A23E42 /* Pods_Homepwner2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homepwner2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77782581A2D6D20CD3A64400 /* Pods_Homepwner2_Homepwner2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homepwner2_Homepwner2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AA68BF79334F19D36AF0D03 /* Pods-Homepwner2-Homepwner2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homepwner2-Homepwner2UITests.release.xcconfig"; path = "Target Support Files/Pods-Homepwner2-Homepwner2UITests/Pods-Homepwner2-Homepwner2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		855D702247955A9AAAF786D8 /* Pods-Homepwner2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homepwner2Tests.debug.xcconfig"; path = "Target Support Files/Pods-Homepwner2Tests/Pods-Homepwner2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F19BCF8FC6E4C520000F5D3B /* Pods_Homepwner2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homepwner2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F36975ABFFE2384FDAC5D341 /* Pods_Homepwner2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479C6FDE405F5B26E230E675 /* Pods_Homepwner2Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E74D9563B6EFFCDCE478F7 /* Pods_Homepwner2_Homepwner2UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +110,8 @@
 				6AA9AEBB242D87F100857714 /* Homepwner2Tests */,
 				6AA9AEC6242D87F100857714 /* Homepwner2UITests */,
 				6AA9AEA3242D87EE00857714 /* Products */,
+				DDFE6B3EF2F5D9661D77D06E /* Pods */,
+				9DEA661C3C35AD1E610BF2C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +128,7 @@
 		6AA9AEA4242D87EE00857714 /* Homepwner2 */ = {
 			isa = PBXGroup;
 			children = (
+				6A81D6252454C3D300AD3B23 /* GoogleService-Info.plist */,
 				6AA9AEA5242D87EE00857714 /* AppDelegate.swift */,
 				6AA9AEA7242D87EE00857714 /* SceneDelegate.swift */,
 				6AA9AEAB242D87EE00857714 /* Main.storyboard */,
@@ -143,6 +163,29 @@
 			path = Homepwner2UITests;
 			sourceTree = "<group>";
 		};
+		9DEA661C3C35AD1E610BF2C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F19BCF8FC6E4C520000F5D3B /* Pods_Homepwner2.framework */,
+				77782581A2D6D20CD3A64400 /* Pods_Homepwner2_Homepwner2UITests.framework */,
+				73FFBFC7C944E369F4A23E42 /* Pods_Homepwner2Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDFE6B3EF2F5D9661D77D06E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				562D1BBAF687C2296DB5819F /* Pods-Homepwner2.debug.xcconfig */,
+				221368C99A1C0FCFF015587C /* Pods-Homepwner2.release.xcconfig */,
+				23E594E1FB1F4613105662D2 /* Pods-Homepwner2-Homepwner2UITests.debug.xcconfig */,
+				7AA68BF79334F19D36AF0D03 /* Pods-Homepwner2-Homepwner2UITests.release.xcconfig */,
+				855D702247955A9AAAF786D8 /* Pods-Homepwner2Tests.debug.xcconfig */,
+				27DAB301284919C78B48A8A0 /* Pods-Homepwner2Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AA9AECC242D87F100857714 /* Build configuration list for PBXNativeTarget "Homepwner2" */;
 			buildPhases = (
+				E7506B52F8B6B29EB53FDD34 /* [CP] Check Pods Manifest.lock */,
 				6AA9AE9E242D87EE00857714 /* Sources */,
 				6AA9AE9F242D87EE00857714 /* Frameworks */,
 				6AA9AEA0242D87EE00857714 /* Resources */,
+				F630B71A15675AC1382D8CD4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AA9AECF242D87F100857714 /* Build configuration list for PBXNativeTarget "Homepwner2Tests" */;
 			buildPhases = (
+				DF01DF7CFF71BEF35309B582 /* [CP] Check Pods Manifest.lock */,
 				6AA9AEB4242D87F100857714 /* Sources */,
 				6AA9AEB5242D87F100857714 /* Frameworks */,
 				6AA9AEB6242D87F100857714 /* Resources */,
@@ -185,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AA9AED2242D87F100857714 /* Build configuration list for PBXNativeTarget "Homepwner2UITests" */;
 			buildPhases = (
+				F082B1C53FABEF9FF549CAD4 /* [CP] Check Pods Manifest.lock */,
 				6AA9AEBF242D87F100857714 /* Sources */,
 				6AA9AEC0242D87F100857714 /* Frameworks */,
 				6AA9AEC1242D87F100857714 /* Resources */,
+				6571E4EA67AC53BC9E0AF17C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AA9AEB2242D87F100857714 /* LaunchScreen.storyboard in Resources */,
+				6A81D6262454C3D300AD3B23 /* GoogleService-Info.plist in Resources */,
 				6AA9AEAF242D87F100857714 /* Assets.xcassets in Resources */,
 				6AA9AEAD242D87EE00857714 /* Main.storyboard in Resources */,
 			);
@@ -268,6 +317,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6571E4EA67AC53BC9E0AF17C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Homepwner2-Homepwner2UITests/Pods-Homepwner2-Homepwner2UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Homepwner2-Homepwner2UITests/Pods-Homepwner2-Homepwner2UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Homepwner2-Homepwner2UITests/Pods-Homepwner2-Homepwner2UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF01DF7CFF71BEF35309B582 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Homepwner2Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7506B52F8B6B29EB53FDD34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Homepwner2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F082B1C53FABEF9FF549CAD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Homepwner2-Homepwner2UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F630B71A15675AC1382D8CD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Homepwner2/Pods-Homepwner2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Homepwner2/Pods-Homepwner2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Homepwner2/Pods-Homepwner2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6AA9AE9E242D87EE00857714 /* Sources */ = {
@@ -452,6 +604,7 @@
 		};
 		6AA9AECD242D87F100857714 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 562D1BBAF687C2296DB5819F /* Pods-Homepwner2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -469,6 +622,7 @@
 		};
 		6AA9AECE242D87F100857714 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 221368C99A1C0FCFF015587C /* Pods-Homepwner2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +640,7 @@
 		};
 		6AA9AED0242D87F100857714 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855D702247955A9AAAF786D8 /* Pods-Homepwner2Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -507,6 +662,7 @@
 		};
 		6AA9AED1242D87F100857714 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27DAB301284919C78B48A8A0 /* Pods-Homepwner2Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +684,7 @@
 		};
 		6AA9AED3242D87F100857714 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23E594E1FB1F4613105662D2 /* Pods-Homepwner2-Homepwner2UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -547,6 +704,7 @@
 		};
 		6AA9AED4242D87F100857714 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AA68BF79334F19D36AF0D03 /* Pods-Homepwner2-Homepwner2UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

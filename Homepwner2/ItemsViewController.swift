@@ -7,6 +7,7 @@
 //
 import CoreData
 import UIKit
+import FirebaseDatabase
 
 class ItemsViewController: UITableViewController {
     
@@ -14,20 +15,35 @@ class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
     var imageStore: ImageStore!
     
-    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
-        // Create a new item and add it to the store
-        print("HI ADDING NEW ITEM")
-        let newItem = itemStore.createItem()
-        // Figure out where that item is in the array
-        if let index = itemStore.allItems.firstIndex(of: newItem) {
-            let indexPath = IndexPath(row: index, section: 0)
-            // Insert this new row into the table
-            tableView.insertRows(at: [indexPath], with: .automatic)
+    var ref: DatabaseReference!
+    private var databaseHandle: DatabaseHandle!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        }
+        ref = Database.database().reference()
+        startObservingDatabase()
+        
+        (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 65
     }
     
-    @IBOutlet var additem: UIBarButtonItem!
+    func startObservingDatabase () {
+//        databaseHandle = ref.child("users/\(self.user.uid)/items").observe(.value, with: { (snapshot) in
+//            var newItems = [Item]()
+//
+//            for itemSnapShot in snapshot.children {
+//                let item = Item(snapshot: itemSnapShot as! FIRDataSnapshot)
+//                newItems.append(item)
+//            }
+//
+//            self.items = newItems
+//            self.tableView.reloadData()
+//
+//        })
+    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -67,7 +83,7 @@ class ItemsViewController: UITableViewController {
               
             // Present the alert controller
             present(ac, animated: true, completion: nil)
-                
+            item.ref?.removeValue()
         }
     }
 
@@ -92,19 +108,12 @@ class ItemsViewController: UITableViewController {
         return cell
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all 
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 65
-    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // If the triggered segue is the "showItem" segue
         
         switch segue.identifier {
             
         case "addItem"?:
-            print("here is the segue working?")
             let newItem = itemStore.createItem()
             // Figure out where that item is in the array
             if let index = itemStore.allItems.firstIndex(of: newItem) {
